@@ -1,0 +1,21 @@
+---
+interface Props {
+  variant?: 'default' | 'brand' | 'accent' | 'success';
+  class?: string;
+}
+
+const { variant = 'default', class: className } = Astro.props;
+
+const variants = {
+  default: 'bg-gray-100 dark:bg-gray-800 text-gray-700 dark:text-gray-300',
+  brand: 'bg-brand-50 dark:bg-brand-950 text-brand-700 dark:text-brand-300',
+  accent: 'bg-accent-50 dark:bg-accent-950 text-accent-700 dark:text-accent-300',
+  success: 'bg-green-50 dark:bg-green-950 text-green-700 dark:text-green-300',
+};
+
+const classes = ['inline-flex items-center px-3 py-1 rounded-full text-xs font-medium tracking-wide', variants[variant], className].filter(Boolean).join(' ');
+---
+
+<span class={classes}>
+  <slot />
+</span>

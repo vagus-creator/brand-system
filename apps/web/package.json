@@ -1,0 +1,23 @@
+{
+  "name": "@brand-system/web",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Astro-based landing page and marketing site template using the brand design system.",
+  "scripts": {
+    "dev": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "clean": "rm -rf dist .astro"
+  },
+  "dependencies": {
+    "astro": "^5",
+    "@astrojs/tailwind": "^6",
+    "tailwindcss": "^4",
+    "@brand-system/tokens": "workspace:*",
+    "@brand-system/ui": "workspace:*"
+  },
+  "devDependencies": {
+    "@tailwindcss/vite": "^4"
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "name": "@brand-system/tokens",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Design tokens for the brand system – colors, typography, spacing, shadows, radii.",
+  "main": "dist/index.js",
+  "scripts": {
+    "build": "node build.mjs",
+    "clean": "rm -rf dist"
+  },
+  "devDependencies": {
+    "style-dictionary": "^4"
+  }
+}

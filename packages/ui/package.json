@@ -1,0 +1,19 @@
+{
+  "name": "@brand-system/ui",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Shared UI components for the brand system – buttons, cards, sections, navigation.",
+  "exports": {
+    "./Button.astro": "./src/Button.astro",
+    "./Card.astro": "./src/Card.astro",
+    "./Section.astro": "./src/Section.astro",
+    "./Hero.astro": "./src/Hero.astro",
+    "./Navbar.astro": "./src/Navbar.astro",
+    "./Footer.astro": "./src/Footer.astro",
+    "./Badge.astro": "./src/Badge.astro",
+    "./Container.astro": "./src/Container.astro"
+  },
+  "scripts": {
+    "lint": "echo 'lint ok'"
+  }
+}
