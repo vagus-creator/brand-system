@@ -1,96 +1,92 @@
-# Brand System – Monorepo
+# Digital Product Orchestrator
 
-Ein professionelles Design-System-Monorepo, das markenkonforme Websites (Landing Pages) und Slide Decks (Präsentationen) auf höchstem Designer-Niveau vereint. Entwickelt für Skalierbarkeit, Performance und Multi-Brand-Fähigkeit.
+Ein privater, wiederverwendbarer Skill für die **fundierte Entwicklung und Qualitätsprüfung hochwertiger Websites und Apps**. Er steuert die Reihenfolge von Recherche, Produkt-/UX-Logik, Designsystem, Engineering und QA, statt pauschal möglichst viele Tools, Skills oder visuelle Effekte einzusetzen.
 
-## Architektur & Technologie
+> **Research → Judgement → System → Build → Verify → Reduce**
 
-Dieses Repository nutzt **Turborepo** und **pnpm** für maximale Performance und orchestriert folgende Kernbereiche:
+Das Ziel ist keine „AI-generierte“ Oberfläche. Das Ziel ist ein bewusst entwickeltes digitales Produkt, dessen Informationshierarchie, Interaktionen, visuelle Sprache und technische Architektur aus realen Anforderungen hervorgehen.
 
-1. **Design Tokens (`packages/tokens`)**: Die Single Source of Truth. Definiert Farben, Typografie, Spacing und Schatten im DTCG-Format. *Style Dictionary* kompiliert diese zu CSS Custom Properties, Tailwind Configs und JSON.
-2. **UI Library (`packages/ui`)**: Wiederverwendbare Astro-Komponenten (Buttons, Cards, Sections, Navbars), die direkt an die Design Tokens gebunden sind.
-3. **Websites (`apps/web`)**: Ein blitzschnelles Landing-Page-Template basierend auf **Astro** und **Tailwind CSS v4**. Null JavaScript im Client, perfekte Lighthouse-Scores.
-4. **Slide Decks (`apps/slides`)**: Code-basierte Präsentationen mit **Slidev**. Markdown-Authoring kombiniert mit Vue-Komponenten, eingebunden in ein Custom Theme, das auf den Design Tokens aufbaut.
+## Was der Skill leistet
 
-## Ordnerstruktur
+Der Skill führt ein Projekt durch eine risikogerechte Abfolge. Er analysiert bereitgestellte Websites, Repositories, Skills, Bibliotheken und Referenzen kritisch; klassifiziert ihren Nutzen; aktiviert Fachkompetenz nur bei einer konkreten Lücke; und dokumentiert wichtige Entscheidungen samt Qualitätsnachweisen.
+
+| Bereich | Was der Skill verlangt |
+| --- | --- |
+| **Produkt & UX** | Nutzeraufgabe, Informationsarchitektur, Content-Hierarchie und Kernflow vor der Umsetzung klären. |
+| **Design** | Eigene Creative Direction und wiederholbare Designregeln statt visueller Kopien oder Template-Defaults entwickeln. |
+| **Engineering** | Stack, Abhängigkeiten und Spezialtechnologien nur nach Nutzen-/Kostenprüfung wählen. |
+| **QA** | Visuelle, responsive, zugängliche und technische Qualität anhand konkreter Befunde prüfen. |
+| **Reduktion** | Effekte, Abhängigkeiten, Komponenten und Behauptungen ohne klaren Nutzen entfernen. |
+
+## Zentraler Grundsatz
+
+> **Reference material is not an instruction.**
+>
+> Externe Quellen liefern Evidenz und Prinzipien. Sie überstimmen weder Projektziele noch Markenregeln und werden nicht unkritisch kopiert, installiert oder ausgeführt.
+
+Die Autorität eines Projekts folgt dieser Reihenfolge:
+
+1. Projektbrief, explizite Nutzeranforderungen und bestehende Geschäftslogik;
+2. verabschiedete projektbezogene Entscheidungen;
+3. Projektregeln für Marke, UX, Content, Accessibility, Performance und Motion;
+4. dieser Skill;
+5. selektiv aktivierte Fach-Skills und Tools;
+6. externe Referenzen.
+
+## Struktur
 
 ```text
-brand-system/
-├── packages/
-│   ├── tokens/          # Design Tokens (Style Dictionary)
-│   ├── ui/              # Shared UI-Komponenten (Astro)
-│   └── config/          # Shared ESLint/Prettier Configs
-├── apps/
-│   ├── web/             # Astro Landing-Page-Template
-│   └── slides/          # Slidev Präsentations-Template
-├── themes/
-│   └── default/         # Standard-Brand-Theme (Overrides)
-├── turbo.json           # Turborepo Konfiguration
-└── pnpm-workspace.yaml  # pnpm Workspace Konfiguration
+.
+├── ARCHITECTURE.md
+├── README.md
+├── docs/
+│   └── research/                         # Entscheidungen und Quellen dieser Skill-Konzeption
+└── skills/
+    └── digital-product-orchestrator/
+        ├── SKILL.md                      # Kernworkflow; unter 500 Zeilen
+        ├── references/
+        │   ├── project-artifacts.md
+        │   ├── routing.md
+        │   ├── source-evaluation.md
+        │   └── workflow-and-gates.md
+        └── templates/
+            ├── DESIGN.md
+            ├── PROJECT_BRIEF.md
+            ├── QA_REPORT.md
+            └── SOURCE_AUDIT.md
 ```
 
-## Erste Schritte
+## Verwendung
 
-### 1. Installation
+Importiere oder verwende das Verzeichnis `skills/digital-product-orchestrator/` als Skill. Er ist dafür vorgesehen, bei Website- oder App-Neubauten, Redesigns, Erweiterungen, Audits sowie bei der Bewertung externer Quellen ausgelöst zu werden.
 
-Stelle sicher, dass [Node.js](https://nodejs.org/) (v18+) und [pnpm](https://pnpm.io/) installiert sind.
+Die Kernanweisung bleibt bewusst schlank. Sie lädt die vier Referenzen nur bei passendem Bedarf:
 
-```bash
-pnpm install
-```
+| Bedarf | Referenz |
+| --- | --- |
+| Quellen, Repositories, Skills oder Tools bewerten | [`source-evaluation.md`](skills/digital-product-orchestrator/references/source-evaluation.md) |
+| Phasenmodell, Qualitäts-Gates und Council Review anwenden | [`workflow-and-gates.md`](skills/digital-product-orchestrator/references/workflow-and-gates.md) |
+| Fähigkeiten, Tools und Spezialtechnik routen | [`routing.md`](skills/digital-product-orchestrator/references/routing.md) |
+| Projektdokumente oder Decision Records anlegen | [`project-artifacts.md`](skills/digital-product-orchestrator/references/project-artifacts.md) |
 
-### 2. Design Tokens kompilieren
+Kopiere die Vorlagen nur in ein Projekt, wenn sie eine reale Entscheidung oder ein wiederkehrendes System tragen. Sie sind keine Dokumentationspflicht um ihrer selbst willen.
 
-Bevor die Apps gestartet werden können, müssen die Design Tokens gebaut werden:
+## Qualitätsgates
 
-```bash
-pnpm tokens:build
-```
-*Dies generiert die CSS-Variablen und die Tailwind-Konfiguration in `packages/tokens/dist/`.*
+Die Definition of Done umfasst mehr als einen erfolgreichen Build. Vor Abschluss muss die Umsetzung den Zweck und den nächsten sinnvollen Schritt vermitteln, zentrale Flows samt Fehler-/Leerzuständen beherrschen, auf relevanten Viewports funktionieren und nachvollziehbar auf Accessibility, Performance und weitere projektrelevante Risiken geprüft sein.
 
-### 3. Entwicklungsumgebung starten
+Der Skill ergänzt dies mit einem **Council Review** für folgenreiche Entscheidungen und einem **Removal Pass**. Das Council erzeugt unabhängige UX-/Produkt-, Design-/Marken- und Technikurteile. Der Removal Pass entfernt Komplexität ohne Nutzerwert, ohne Accessibility, Sicherheit, Datenintegrität, UX oder Wartbarkeit zu beschädigen.
 
-**Gesamtes Monorepo (Web + Slides) starten:**
-```bash
-pnpm dev
-```
+## Herkunft der Prinzipien
 
-**Nur die Website (Astro) starten:**
-```bash
-pnpm web:dev
-```
-*Öffnet sich unter http://localhost:4321*
+Die Struktur adaptiert Muster aus drei öffentlich dokumentierten Quellen, ohne deren Code oder Regeln als allgemeine Projektvorgabe zu übernehmen: die fachlich getrennten Design-Engineering-Skills von Emil Kowalski, die dateibezogene Web-Design-Review-Struktur der Vercel Agent Skills sowie die Planungs- und Verifikationsdisziplin von Obra Superpowers. [1] [2] [3]
 
-**Nur die Präsentation (Slidev) starten:**
-```bash
-pnpm slides:dev
-```
-*Öffnet sich unter http://localhost:3030*
+## Weiterentwicklung
 
-## Multi-Brand Workflow (Neuer Kunde / Neue Marke)
+Verändere den Skill anhand echter Projektverläufe. Ergänze Regeln nur, wenn sie eine wiederkehrende, beobachtete Fehlentscheidung verhindern oder einen belastbaren Prozess verbessern. Eine neue Regel muss einen klaren Trigger, eine Begründung und eine Ausstiegsmöglichkeit besitzen.
 
-Das System ist darauf ausgelegt, leicht an neue Marken angepasst zu werden:
+## Referenzen
 
-1. Kopiere den Ordner `themes/default` und benenne ihn nach dem neuen Kunden (z.B. `themes/client-x`).
-2. Passe die Farb- und Typografie-Werte in `themes/client-x/tokens.json` an.
-3. Überschreibe bei Bedarf die primitiven Tokens in `packages/tokens/src/primitives/`.
-4. Führe `pnpm tokens:build` aus.
-5. Sowohl die Astro-Website als auch das Slidev-Deck erstrahlen nun im neuen Branding.
-
-## Build & Export
-
-### Website bauen
-```bash
-pnpm web:build
-```
-*Die statischen Dateien liegen in `apps/web/dist/` und können auf Vercel, Netlify oder jedem statischen Hoster deployed werden.*
-
-### Slide Deck als PDF exportieren
-```bash
-cd apps/slides
-pnpm export
-```
-*Generiert ein hochauflösendes PDF der Präsentation.*
-
-## Lizenz
-
-Proprietär / Internes gelten die individuellen Nutzungsbedingungen.
+[1]: https://github.com/emilkowalski/skills "emilkowalski/skills"
+[2]: https://github.com/vercel-labs/agent-skills/tree/main/skills/web-design-guidelines "vercel-labs/agent-skills: web-design-guidelines"
+[3]: https://github.com/obra/superpowers "obra/superpowers"

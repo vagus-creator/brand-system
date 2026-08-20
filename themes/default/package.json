@@ -1,7 +1,0 @@
-{
-  "name": "@brand-system/theme-default",
-  "version": "1.0.0",
-  "private": true,
-  "description": "Default brand theme – override token values here for custom branding.",
-  "main": "tokens.json"
-}

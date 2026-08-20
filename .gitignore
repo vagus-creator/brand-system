@@ -1,27 +1,23 @@
-# Dependencies
-node_modules/
-
-# Build outputs
-dist/
-.output/
-.astro/
-
-# Turborepo
-.turbo/
-
-# Environment
-.env
-.env.*local
-
-# OS
+# Operating system and editor files
 .DS_Store
 Thumbs.db
-
-# IDE
-.vscode/
 .idea/
+.vscode/
 *.swp
 *.swo
 
-# Logs
+# Local build and dependency artifacts
+node_modules/
+dist/
+build/
+coverage/
+.turbo/
+.astro/
+
+# Local environment and temporary files
+.env
+.env.*
+!.env.example
 *.log
+.tmp/
+tmp/
